@@ -15,7 +15,7 @@ const mutations = {
 
 const actions = {
     buyStock: ({ commit }, order) => {
-        commit();               // commit a certain mutation in one of the portfolio file
+        commit('BUY_STOCK', order);               // commit a certain mutation in one of the portfolio file
     },
     initStocks: ({ commit }) => {       // initalize stocks
         commit('SET_STOCKS', stocks)

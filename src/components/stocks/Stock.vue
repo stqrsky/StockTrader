@@ -45,6 +45,7 @@
                     quantity: this.quantity
                 };
                 console.log(order);
+                this.$store.dispatch('buyStock', order);        // 2nd arg. as my payload
                 this.quantity = 0;
             }
         }
