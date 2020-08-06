@@ -1,3 +1,5 @@
+import stocks from '../../data/stocks';
+
 const state = {
     stocks: []
 };
@@ -15,7 +17,7 @@ const actions = {
     buyStock: ({ commit }, order) => {
         commit();               // commit a certain mutation in one of the portfolio file
     },
-    setStocks: ({ commit }) => {
-        commit('SET_STOCKS')
+    initStocks: ({ commit }) => {       // initalize stocks
+        commit('SET_STOCKS', stocks)
     }
 };
