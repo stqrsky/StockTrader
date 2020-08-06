@@ -10,6 +10,11 @@
     export default {
         components: {
             appStock: Stock
+        },
+        computed: {                 // need array to loop through , get getter
+            stocks() {
+                return this.$store.getters.stocks;
+            }
         }
     }
 </script>
