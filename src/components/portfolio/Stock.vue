@@ -50,6 +50,7 @@
                     quantity: this.quantity
                 };
                 this.sellStock(order);
+                this.quantity = 0;
             }
         }
     }
