@@ -40,16 +40,16 @@
             }
         },
         methods: {
-            ...mapActions([
-                'sellStock'
-            ]),                       // call mapActions to distribute all the properties it's gonna create
+            ...mapActions({
+                placeSellOrder: 'sellStock'
+            }),                       // call mapActions to distribute all the properties it's gonna create
             sellStock() {
                 const order = {
                     stockId: this.stock.id,
                     stockPrice: this.stock.price,
                     quantity: this.quantity
                 };
-                this.sellStock(order);
+                this.placeSellOrder(order);
                 this.quantity = 0;
             }
         }
