@@ -33,10 +33,20 @@
 </template>
 
 <script>
+    import {mapActions} from 'vuex';
+
     export default {
         computed: {
             funds() {
                 return this.$store.getters.funds;
+            }
+        },
+        methods: {
+            ...mapActions([
+                'randomizeStocks'
+            ]),
+            endDay() {
+                this.randomizeStocks();
             }
         }
     }
