@@ -4,4 +4,4 @@
 
 ---
 
-![img](src/assets/stocktrader1.png)
+![img](src/assets/StockT.png)
